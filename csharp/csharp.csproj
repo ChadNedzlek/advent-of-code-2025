@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <NoWarn>CS8509;CS1998</NoWarn>
+        <RootNamespace>ChadNedzlek.AdventOfCode.Y2025.CSharp</RootNamespace>
+        <Nullable>disable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <Configurations>Debug;Release</Configurations>
+        <Platforms>AnyCPU</Platforms>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="..\data\data-*.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>data\%(Filename)%(Extension)</Link>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ComputeSharp" />
+      <PackageReference Include="ComputeSharp.Dxc" />
+      <PackageReference Include="ComputeSharp.Pix" />
+      <PackageReference Include="JetBrains.Annotations" />
+      <PackageReference Include="Mono.Options" />
+      <PackageReference Include="Spectre.Console" />
+      <PackageReference Include="System.IO.Hashing" />
+      <PackageReference Include="System.Linq.Async" />
+      <PackageReference Include="TorchSharp-cuda-windows" />
+      <PackageReference Include="SkiaSharp" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AocData\AocData.csproj" />
+      <ProjectReference Include="..\lib\lib.csproj" />
+    </ItemGroup>
+
+</Project>
